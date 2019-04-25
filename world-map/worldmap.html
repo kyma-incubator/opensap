@@ -1,0 +1,15 @@
+<div id="map" style="width: 100%; height: 400px; background-color: grey;"></div>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 1,
+            center: new google.maps.LatLng(52.520008, 13.404954),
+        });
+
+        map.data.loadGeoJson('https://location-json-production.wordpress.cluster.int.faros.kyma.cx/');
+    }
+</script>
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2Bc7HNtc0Tp0cLeb4mLxQg-uLKOLZ6N4&amp;callback=initMap">
+</script>
